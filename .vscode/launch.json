@@ -5,19 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Apex Debugger",
-            "type": "apex",
-            "request": "launch",
-            "userIdFilter": [],
-            "requestTypeFilter": [],
-            "entryPointFilter": "",
-            "sfdxProject": "${workspaceRoot}"
+            "name": "(lldb) Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "/Users/cassiawallach/Desktop/node-express-course/ResultFiles",
+            "processId": "${command:pickProcess}",
+            "MIMode": "lldb"
         },
+
+
         {
-            "type": "godot-quickjs",
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
             "request": "launch",
-            "name": "Launch Godot Game",
-            "program": "/path/to/qjs"
+            "program": "/Users/cassiawallach/Desktop/node-express-course/ResultFiles",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
         }
+
     ]
 }
